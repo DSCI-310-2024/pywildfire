@@ -2,6 +2,8 @@ import os
 import requests
 import zipfile
 import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler
 import shutil
 
 def download_extract_data(url, output_path):
