@@ -9,14 +9,14 @@ def download_extract_data(url, output_path):
     Download a zip file from a URL and extract the data it contains, storing it locally 
     in the specified directory.
 
-    Parameters:
+    Parameters
     ----------
     url: str
         The URL of the zip file to be read
     output_path: str
         The directory in which the zip file's contents will be extracted and stored
 
-    Returns:
+    Returns
     -------
     str
         A message indicating whether the function execution was successful.
@@ -69,19 +69,19 @@ def get_csv(output_path, csv_file):
     Returns a pandas DataFrame containing data from a csv file if it exists in the specified 
     directory, returns None if it does not exist.
 
-    Parameters:
+    Parameters
     ----------
     output_path: str
         The directory containing the csv file
     csv_file: str
         The name of the csv file containing the desired data
 
-    Returns:
-    ----------
+    Returns
+    -------
     pandas.DataFrame or None
         A DataFrame containing data from the specified csv file if found, else None
 
-     Examples
+    Examples
     --------
     >>> ...
     """
@@ -98,17 +98,17 @@ def scale_numeric_df(data):
     Scale the numeric columns of a DataFrame using StandardScaler()
     and return the modified DataFrame.
    
-    Parameters:
-    ----
+    Parameters
+    ----------
     data: pandas.DataFrame
         Dataset with unscaled numeric columns.
     
-    Returns:
-    ------
+    Returns
+    -------
     scaled_df: pandas.DataFrame
         Dataset with scaled columns.
 
-     Examples
+    Examples
     --------
     >>> ...
     """

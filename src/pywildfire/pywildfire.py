@@ -6,20 +6,20 @@ def calculate_rmse(observed, predicted):
     """
     ...
 
-    Parameters:
+    Parameters
     ----------
     observed: ...
         ...
     predicted: ...
         ...
 
-    Returns:
+    Returns
     -------
     float
         ...
 
-    Raises:
-    -------
+    Raises
+    ------
     ValueError
         ...
     
