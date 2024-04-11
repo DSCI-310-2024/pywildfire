@@ -7,9 +7,24 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9"
+pandas = ">=2.2.1"
+requests = ">=2.31.0"
+numpy = ">=1.26.4"
+scikit-learn = ">=1.4.1.post1"
+responses = "^0.25.0"
+pytest = "^8.1.1"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+pytest-cov = "^5.0.0"
+myst-nb = ">=1.0.0"
+sphinx-autoapi = "^3.0.0"
+sphinx-rtd-theme = "^2.0.0"
+jupyter = "^1.0.0"
+
 [tool.semantic_release]
 version_toml = [
     "pyproject.toml:tool.poetry.version",
