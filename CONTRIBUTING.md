@@ -71,3 +71,7 @@ Before you submit a pull request, check that it meets these guidelines:
 
 Please note that the `pywildfire` project is released with a
 Code of Conduct. By contributing to this project you agree to abide by its terms.
+
+## Credit
+
+This contribution documentation was generated with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
