@@ -25,7 +25,15 @@ def download_extract_data(url, output_path):
         
     Examples
     --------
-    >>> ...
+    >>> from pywildfire.pyprep import download_extract_data
+    >>> url = "https://example.com/data.zip"
+    >>> output_path = './data'
+    >>> download_extract_data(url, output_path)
+    your_working_directory  
+        ├── data  
+        │    └── 01_example_data.csv  
+        │    └── 02_example_data.txt  
+        │    └── 03_example_data.csv 
     """
     # Fetch URL and extract file name
     response = requests.get(url)
@@ -74,18 +82,27 @@ def get_csv(output_path, csv_file):
     Parameters
     ----------
     output_path: str
-        The directory containing the csv file
+        The directory containing the csv file.
     csv_file: str
-        The name of the csv file containing the desired data
+        The name of the csv file containing the desired data.
 
     Returns
     -------
     pandas.DataFrame or None
-        A DataFrame containing data from the specified csv file if found, else None
+        A DataFrame containing data from the specified csv file if found, else None.
 
     Examples
     --------
-    >>> ...
+    >>> from pywildfire.pyprep import get_csv
+    >>> csv_file = '01_example_data.csv'
+    data = get_csv(output_path, csv_file)
+    data
+       A   B  C   D       E
+    0  1  10  1  50   small
+    1  3   6  2  30  medium
+    2  5   8  3  40   large
+    3  7   2  4  10   small
+    4  9   4  5  20  medium
     """
     files = [file for file in os.listdir(output_path)]
     if csv_file in files:
@@ -112,7 +129,15 @@ def scale_numeric_df(data):
 
     Examples
     --------
-    >>> ...
+    >>> from pywildfire.pyprep import scale_numeric_df
+    >>> scaled_data = scale_numeric_df(sample_data)
+    scaled_data
+              A         B         C         D
+    0 -1.414214  1.414214 -1.414214  1.414214
+    1 -0.707107  0.000000 -0.707107  0.000000
+    2  0.000000  0.707107  0.000000  0.707107
+    3  0.707107 -1.414214  0.707107 -1.414214
+    4  1.414214 -0.707107  1.414214 -0.707107
     """
     # Check if df is empty
     if data.empty:
