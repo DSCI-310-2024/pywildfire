@@ -13,7 +13,9 @@ $ pip install pywildfire
 `pywildfire` can be used visualizate, preprocess, and plot regression models. 
 
 ``` 
-from pywildfire.pywildfire import ... 
+from pywildfire.pywildfire import calculate_rmse 
+from pywildfire.pyfeats import relevant_features
+from pywildfire.pyprep import download_extract_data 
 
 # TODO: replace with code 
 
