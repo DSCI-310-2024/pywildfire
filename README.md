@@ -1,4 +1,8 @@
 # pywildfire
+
+[![codecov](https://codecov.io/gh/DSCI-310-2024/pywildfire/graph/badge.svg?token=nxuwiB2AzD)](https://codecov.io/gh/DSCI-310-2024/pywildfire)
+
+
 Authors: Pahul Brar, Fiona Chang, Lillian Milroy, & Darwin Zhang
 
 Predict wildfire intensity!
