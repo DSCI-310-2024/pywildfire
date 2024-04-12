@@ -17,8 +17,27 @@ from pywildfire.pywildfire import calculate_rmse
 from pywildfire.pyfeats import relevant_features
 from pywildfire.pyprep import download_extract_data 
 
-# TODO: replace with code 
+# Read a url online and download to files
 
+url = "https://example.com/data.zip"
+download_extract_data("url", "./data")
+
+# Identify relevant features based on correlation coefficients.
+
+corr_matrix = pd.DataFrame({
+    'A': {'A': 1.0, 'B': -0.8, 'C': 1.0, 'D': -0.8},
+    'B': {'A': -0.8, 'B': 1.0, 'C': -0.8, 'D': 1.0},
+    'C': {'A': 1.0, 'B': -0.8, 'C': 1.0, 'D': -0.8},
+    'D': {'A': -0.8, 'B': 1.0, 'C': -0.8, 'D': 1.0}
+})
+target_var = 'A'
+relevant_features(corr_matrix, target_var)
+
+# Calculate the Root Mean Squared Error (RMSE) between observed and predicted values.
+
+observed = [4, 8, 5, 3, 7]
+predicted = [16, 4, 7, 9, 3]
+calculate_rmse(observed, predicted)
 ```
 
 ## Contributing
