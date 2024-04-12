@@ -2,6 +2,8 @@
 
 [![codecov](https://codecov.io/gh/DSCI-310-2024/pywildfire/graph/badge.svg?token=nxuwiB2AzD)](https://codecov.io/gh/DSCI-310-2024/pywildfire)
 
+[Read the Docs](https://pywildfire.readthedocs.io/en/latest/example.html)
+
 
 Authors: Pahul Brar, Fiona Chang, Lillian Milroy, & Darwin Zhang
 
