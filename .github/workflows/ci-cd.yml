@@ -87,12 +87,6 @@ jobs:
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
 
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          slug: DSCI-310-2024/pywildfire
-
       - name: Publish package distributions to GitHub Releases
         uses: python-semantic-release/upload-to-gh-release@main
         if: steps.release.outputs.released == 'true'
