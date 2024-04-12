@@ -30,6 +30,7 @@ corr_matrix = pd.DataFrame({
     'C': {'A': 1.0, 'B': -0.8, 'C': 1.0, 'D': -0.8},
     'D': {'A': -0.8, 'B': 1.0, 'C': -0.8, 'D': 1.0}
 })
+
 target_var = 'A'
 relevant_features(corr_matrix, target_var)
 
