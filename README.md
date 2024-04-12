@@ -20,30 +20,34 @@ $ pip install pywildfire
 
 Example Usage of pywildfire
 
-```python
-import pandas as pd
-from sklearn.preprocessing import StandardScaler
-from pywildfire.pyprep import scale_numeric_df
+``` 
+from pywildfire.pywildfire import calculate_rmse 
+from pywildfire.pyfeats import relevant_features
+from pywildfire.pyprep import download_extract_data 
 
-# Create sample data
-sample_data = pd.DataFrame({
-    'A': [1, 2, 3, 4, 5],
-    'B': [2, 3, 4, 5, 6],
-    'C': [3, 4, 5, 6, 7],
-    'D': [4, 5, 6, 7, 8]
+# Read a url online and download to files
+
+url = "https://example.com/data.zip"
+download_extract_data("url", "./data")
+
+# Identify relevant features based on correlation coefficients.
+
+corr_matrix = pd.DataFrame({
+    'A': {'A': 1.0, 'B': -0.8, 'C': 1.0, 'D': -0.8},
+    'B': {'A': -0.8, 'B': 1.0, 'C': -0.8, 'D': 1.0},
+    'C': {'A': 1.0, 'B': -0.8, 'C': 1.0, 'D': -0.8},
+    'D': {'A': -0.8, 'B': 1.0, 'C': -0.8, 'D': 1.0}
 })
 
-# Scale numeric columns
-scaled_data = scale_numeric_df(sample_data)
+target_var = 'A'
+relevant_features(corr_matrix, target_var)
 
-# Print scaled data
-print(scaled_data)
+# Calculate the Root Mean Squared Error (RMSE) between observed and predicted values.
+
+observed = [4, 8, 5, 3, 7]
+predicted = [16, 4, 7, 9, 3]
+calculate_rmse(observed, predicted)
 ```
-Further usage can be found in our package documentation. TODO
-
-## Package Ecosystem
-
-PyWildfire is among the robust Python packages for data preprocessing and analysis for regression, though our package focuses on wildfire-related datasets. While scikit-learn and pandas are other general preprocessing libraries, pywildfire differentiates itsself with functionalities centered around wildfire data.
 
 
 ## Contributing
