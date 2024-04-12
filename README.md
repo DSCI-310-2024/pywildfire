@@ -1,4 +1,5 @@
 # pywildfire
+Authors: Pahul Brar, Fiona Chang, Lillian Milroy, & Darwin Zhang
 
 Predict wildfire intensity!
 
@@ -10,7 +11,14 @@ $ pip install pywildfire
 
 ## Usage
 
-`pywildfire` can be used visualizate, preprocess, and plot regression models. 
+`pywildfire` can be used to:
+
+- Download a zip file from a provided URL to extract data and store it in a local directory
+- Returns a list of relevant features from a correlation matrix and a target variable
+- Calculate the Root Mean Squared Error (RMSE) given observed and predicted values
+- Scale numeric values in a dataframe
+
+Example Usage of pywildfire
 
 ``` 
 from pywildfire.pywildfire import calculate_rmse 
@@ -41,9 +49,10 @@ predicted = [16, 4, 7, 9, 3]
 calculate_rmse(observed, predicted)
 ```
 
+
 ## Contributing
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+Are you looking to contribute? Please view our contributing guidelines in CONTRIBUTING.md. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
 
 ## License
 
