@@ -10,7 +10,14 @@ $ pip install pywildfire
 
 ## Usage
 
-- TODO
+`pywildfire` can be used visualizate, preprocess, and plot regression models. 
+
+``` 
+from pywildfire.pywildfire import ... 
+
+# TODO: replace with code 
+
+```
 
 ## Contributing
 
